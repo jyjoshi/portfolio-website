@@ -21,6 +21,7 @@ import web6 from "../public/web6.png";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return (
     <div className={darkMode ? "dark" : ""}>
@@ -32,7 +33,7 @@ export default function Home() {
       <main className=" bg-white px-10 dark:bg-gray-900 md:px-20 lg:px-40">
         <section className="min-h-screen">
           <nav className="py-10 mb-12 flex justify-between dark:text-white">
-            <h1 className="font-burtons text-xl">developedbyed</h1>
+            <h1 className="font-burtons text-xl">Portfolio</h1>
             <ul className="flex items-center">
               <li>
                 <BsFillMoonStarsFill
@@ -40,13 +41,44 @@ export default function Home() {
                   className=" cursor-pointer text-2xl"
                 />
               </li>
-              <li>
-                <a
-                  className="bg-gradient-to-r from-cyan-500 text- to-teal-500 text-white px-4 py-2 border-none rounded-md ml-8"
-                  href="#"
+              <li className="relative">
+                <button
+                  className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8"
+                  onClick={() => setDropdownOpen(!dropdownOpen)}
                 >
-                  Resume
-                </a>
+                  Resumes
+                </button>
+                {dropdownOpen && (
+                  <ul className="absolute right-0 w-48 mt-2 py-2 bg-gradient-to-r from-cyan-500 to-teal-500 text-white shadow-xl rounded-lg">
+                    <a
+                      href="https://drive.google.com/file/d/1LnwbDADc58x28tPVkYvMCQa0XxOa-0bu/view?usp=sharing"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <li className="px-4 py-2 hover:bg-gradient-to-r from-cyan-400 to-teal-400">
+                        ML Engineer
+                      </li>
+                    </a>
+                    <a
+                      href="https://drive.google.com/file/d/1EmLyvzr2k7CxcxYN97b8jivNhOOzuwCE/view?usp=sharing"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <li className="px-4 py-2 hover:bg-gradient-to-r from-cyan-400 to-teal-400">
+                        Software Engineer
+                      </li>
+                    </a>
+                    <a
+                      href="https://drive.google.com/file/d/1BxtDAaqsTNYgeNSH__KcWnm4Kq0Uz3z_/view?usp=sharing"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <li className="px-4 py-2 hover:bg-gradient-to-r from-cyan-400 to-teal-400">
+                        CV
+                      </li>
+                    </a>
+                  </ul>
+                )}
               </li>
             </ul>
           </nav>
@@ -78,18 +110,33 @@ export default function Home() {
         </section>
         <section>
           <div>
-            <h3 className="text-3xl py-1 dark:text-white ">Services I offer</h3>
+            <h3 className="text-3xl py-1 dark:text-white ">
+              Core competencies
+            </h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-              Since the beginning of my journey as a freelance designer and
+              {/* Since the beginning of my journey as a freelance designer and
               developer, I've done remote work for
               <span className="text-teal-500"> agencies </span>
               consulted for <span className="text-teal-500">startups </span>
               and collaborated with talanted people to create digital products
-              for both business and consumer use.
+              for both business and consumer use. */}
+              I am a software engineer and machine learning specialist with
+              advanced degrees in Computer Science and Engineering from the
+              University of Southern California and the University of Pune. I
+              specialize in developing machine learning models and have led
+              projects like the auto-regressive character level language model
+              and a tiny autograd engine. Proficient in languages like Python,
+              JavaScript, and Java, I also excel in technologies such as
+              PyTorch, Docker, and Kubernetes.
             </p>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-              I offer from a wide range of services, including brand design,
-              programming and teaching.
+              My technical expertise extends to designing efficient software
+              solutions and systems, notably demonstrated in my "Food Ready"
+              project, which significantly improved operational efficiencies and
+              customer satisfaction. My commitment to community service and
+              educational outreach is evident through my active volunteer work,
+              underscoring my capabilities as a leader in both technical and
+              community-focused roles.
             </p>
           </div>
           <div className="lg:flex gap-10">
