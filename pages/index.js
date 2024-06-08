@@ -435,11 +435,10 @@ export default function Home() {
             <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white flex-1">
               <Image src={gat} width={200} height={80} className="rounded-xl" />
               <h3 className="text-lg font-medium pt-8 pb-2  ">
-                Heterogeneous Link Prediction in Graphs
+                Pente Game Agent
               </h3>
               <p className="py-2">
-                Implemented a link prediction model using Subgraph Sketching and
-                Graph Attention Networks.
+                An agent designed to play pente using minimax algorithm and alpha-beta pruning.
               </p>
               <p className="py-2">
                 Achieved 6th place on the ogbl-biokg leaderboard with an MRR of
@@ -454,7 +453,7 @@ export default function Home() {
 
               <div className="flex gap-4 lg:gap-10 justify-center">
                 <a
-                  href="https://drive.google.com/file/d/19lBOcHphzDgsp72b7P9uGqoBJRm7TOf3/view"
+                  href="https://github.com/jyjoshi/pente_game_agent"
                   target="_blank"
                 >
                   <button className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md mt-4">
