@@ -24,6 +24,8 @@ import k8s from "../public/system_design.png";
 import event_finder from "../public/event_finder.png";
 import micrograd from "../public/micrograd.png";
 import gat from "../public/graph_attention_networks.png";
+import makemore from "../public/makemore.png";
+import nn_attacks from "../public/699_adversarial_attacks.png";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -273,6 +275,7 @@ export default function Home() {
               <p className="text-gray-800 py-1">Python</p>
               <p className="text-gray-800 py-1">Pytorch Geometric</p>
               <p className="text-gray-800 py-1">Jupyter</p>
+              <p className="text-gray-800 py-1">Latex</p>
 
               <div className="flex gap-4 lg:gap-10 justify-center">
                 <a
@@ -292,26 +295,23 @@ export default function Home() {
             </div>
             <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
               <Image
-                src={event_finder}
-                width={200}
+                src={makemore}
+                width={130}
                 height={100}
                 className="rounded-xl"
               />
-              <h3 className="text-lg font-medium pt-8 pb-2 ">Event Finder</h3>
+              <h3 className="text-lg font-medium pt-8 pb-2 ">Makemore</h3>
               <p className="py-2">
-                A web application that allows users to search for live events.
+                An autoregressive character level language model that generates
+                new names for people.
               </p>
               <h4 className="py-2 text-teal-600">Tech Used</h4>
-              <p className="text-gray-800 py-1">Angular</p>
-              <p className="text-gray-800 py-1">HTML,CSS</p>
-              <p className="text-gray-800 py-1">TypeScript</p>
-              <p className="text-gray-800 py-1">JavaScript</p>
-              <p className="text-gray-800 py-1">Google Cloud</p>
+              <p className="text-gray-800 py-1">PyTorch</p>
+              <p className="text-gray-800 py-1">Matplotlib</p>
+              <p className="text-gray-800 py-1">Jupyter</p>
+              <p className="text-gray-800 py-1">Python</p>
               <div className="flex gap-4 lg:gap-10 justify-center">
-                <a
-                  href="https://github.com/jyjoshi/EventFinder-angular"
-                  target="_blank"
-                >
+                <a href="https://github.com/jyjoshi/makemore" target="_blank">
                   <button className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md mt-4">
                     <div className="flex justify-center gap-1 items-center">
                       <div>Code</div>
@@ -321,35 +321,39 @@ export default function Home() {
                     </div>
                   </button>
                 </a>
-                <a
-                  href="https://ticketmaster-angular.wl.r.appspot.com/"
-                  target="_blank"
-                >
-                  <button className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md mt-4">
-                    Website
-                  </button>
-                </a>
               </div>
             </div>
             <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
-              <Image src={micrograd} width={200} height={100} />
-              <h3 className="text-lg font-medium pt-8 pb-2 ">Micrograd</h3>
+              <Image
+                src={nn_attacks}
+                width={200}
+                height={100}
+                className="rounded-3xl"
+              />
+              <h3 className="text-lg font-medium pt-8 pb-2 ">
+                Triggered Adversarial Attacks in Neural Networks
+              </h3>
               <p className="py-2">
-                A minimalistic neural network library designed to facilitate an
-                understanding of the inner workings of neural networks.
+                Demonstrated the potential of triggered adversarial examples to
+                remain hidden and affect specific neural networks only under
+                certain conditions,
               </p>
               <h4 className="py-2 text-teal-600">Tech Used</h4>
+              <p className="text-gray-800 py-1">Latex</p>
               <p className="text-gray-800 py-1">Python</p>
               <p className="text-gray-800 py-1">Jupyter</p>
               <p className="lg:py-3"></p>
               <p className="lg:py-3"></p>
               <div className="flex gap-4 lg:gap-10 justify-center">
-                <a href="https://github.com/jyjoshi/micrograd" target="_blank">
+                <a
+                  href="https://drive.google.com/drive/folders/15Nxage_ktvx77t90gFPxFOR2D2GYBPfu"
+                  target="_blank"
+                >
                   <button className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md mt-4">
                     <div className="flex justify-center gap-1 items-center">
-                      <div>Code</div>
+                      <div>Paper</div>
                       <div>
-                        <AiFillGithub />
+                        <AiFillRead />
                       </div>
                     </div>
                   </button>
