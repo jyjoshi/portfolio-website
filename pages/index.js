@@ -4,6 +4,8 @@ import {
   AiFillLinkedin,
   AiFillYoutube,
   AiFillGithub,
+  AiFillRead,
+  AiFillBook,
 } from "react-icons/ai";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { useState } from "react";
@@ -21,6 +23,7 @@ import web6 from "../public/web6.png";
 import k8s from "../public/system_design.png";
 import event_finder from "../public/event_finder.png";
 import micrograd from "../public/micrograd.png";
+import gat from "../public/graph_attention_networks.png";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -142,7 +145,10 @@ export default function Home() {
               community-focused roles.
             </p>
           </div>
+
+          {/* Projects - 1 */}
           <div className="lg:flex gap-10">
+            {/* Video to Mp3 Converter */}
             <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white flex-1">
               <Image
                 src={k8s}
@@ -173,6 +179,111 @@ export default function Home() {
                       <div>Code</div>
                       <div>
                         <AiFillGithub />
+                      </div>
+                    </div>
+                  </button>
+                </a>
+              </div>
+            </div>
+            {/* Event Finder */}
+            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
+              <Image
+                src={event_finder}
+                width={200}
+                height={100}
+                className="rounded-xl"
+              />
+              <h3 className="text-lg font-medium pt-8 pb-2 ">Event Finder</h3>
+              <p className="py-2">
+                A web application that allows users to search for live events.
+              </p>
+              <h4 className="py-2 text-teal-600">Tech Used</h4>
+              <p className="text-gray-800 py-1">Angular</p>
+              <p className="text-gray-800 py-1">HTML,CSS</p>
+              <p className="text-gray-800 py-1">TypeScript</p>
+              <p className="text-gray-800 py-1">JavaScript</p>
+              <p className="text-gray-800 py-1">Google Cloud</p>
+              <div className="flex gap-4 lg:gap-10 justify-center">
+                <a
+                  href="https://github.com/jyjoshi/EventFinder-angular"
+                  target="_blank"
+                >
+                  <button className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md mt-4">
+                    <div className="flex justify-center gap-1 items-center">
+                      <div>Code</div>
+                      <div>
+                        <AiFillGithub />
+                      </div>
+                    </div>
+                  </button>
+                </a>
+                <a
+                  href="https://ticketmaster-angular.wl.r.appspot.com/"
+                  target="_blank"
+                >
+                  <button className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md mt-4">
+                    Website
+                  </button>
+                </a>
+              </div>
+            </div>
+            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
+              <Image src={micrograd} width={200} height={100} />
+              <h3 className="text-lg font-medium pt-8 pb-2 ">Micrograd</h3>
+              <p className="py-2">
+                A minimalistic neural network library designed to facilitate an
+                understanding of the inner workings of neural networks.
+              </p>
+              <h4 className="py-2 text-teal-600">Tech Used</h4>
+              <p className="text-gray-800 py-1">Python</p>
+              <p className="text-gray-800 py-1">Jupyter</p>
+              <p className="lg:py-3"></p>
+              <p className="lg:py-3"></p>
+              <div className="flex gap-4 lg:gap-10 justify-center">
+                <a href="https://github.com/jyjoshi/micrograd" target="_blank">
+                  <button className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md mt-4">
+                    <div className="flex justify-center gap-1 items-center">
+                      <div>Code</div>
+                      <div>
+                        <AiFillGithub />
+                      </div>
+                    </div>
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+          {/* Projects - 2 */}
+          <div className="lg:flex gap-10">
+            <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white flex-1">
+              <Image src={gat} width={200} height={80} className="rounded-xl" />
+              <h3 className="text-lg font-medium pt-8 pb-2  ">
+                Heterogeneous Link Prediction in Graphs
+              </h3>
+              <p className="py-2">
+                Implemented a link prediction model using Subgraph Sketching and
+                Graph Attention Networks.
+              </p>
+              <p className="py-2">
+                Achieved 6th place on the ogbl-biokg leaderboard with an MRR of
+                0.8414 while using significantly less parameters as compared to
+                the top models.
+              </p>
+              <h4 className="py-2 text-teal-600">Tech Used</h4>
+              <p className="text-gray-800 py-1">Python</p>
+              <p className="text-gray-800 py-1">Pytorch Geometric</p>
+              <p className="text-gray-800 py-1">Jupyter</p>
+
+              <div className="flex gap-4 lg:gap-10 justify-center">
+                <a
+                  href="https://drive.google.com/file/d/19lBOcHphzDgsp72b7P9uGqoBJRm7TOf3/view"
+                  target="_blank"
+                >
+                  <button className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md mt-4">
+                    <div className="flex justify-center gap-1 items-center">
+                      <div>Paper</div>
+                      <div>
+                        <AiFillRead />
                       </div>
                     </div>
                   </button>
