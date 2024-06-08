@@ -376,11 +376,6 @@ export default function Home() {
               <p className="py-2">
                 Visualized and analysed geospatial data using various methods including spirographs, KNN (K-Nearest Neighbors), convex hull algorithms, and the use of SQL queries for data manipulation. 
               </p>
-              <p className="py-2">
-                Achieved 6th place on the ogbl-biokg leaderboard with an MRR of
-                0.8414 while using significantly less parameters as compared to
-                the top models.
-              </p>
               <h4 className="py-2 text-teal-600">Tech Used</h4>
               <p className="text-gray-800 py-1">Python</p>
               <p className="text-gray-800 py-1">HTML</p>
@@ -406,16 +401,10 @@ export default function Home() {
             <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white flex-1">
               <Image src={gat} width={200} height={80} className="rounded-xl" />
               <h3 className="text-lg font-medium pt-8 pb-2  ">
-                Heterogeneous Link Prediction in Graphs
+                Propositional Inference Engine
               </h3>
               <p className="py-2">
-                Implemented a link prediction model using Subgraph Sketching and
-                Graph Attention Networks.
-              </p>
-              <p className="py-2">
-                Achieved 6th place on the ogbl-biokg leaderboard with an MRR of
-                0.8414 while using significantly less parameters as compared to
-                the top models.
+                A propositional logic-based knowledge base (KB) with unit resolution for automated logical inference, enabling the system to ascertain if a provided statement can be logically deduced from the stored facts.
               </p>
               <h4 className="py-2 text-teal-600">Tech Used</h4>
               <p className="text-gray-800 py-1">Python</p>
@@ -425,7 +414,7 @@ export default function Home() {
 
               <div className="flex gap-4 lg:gap-10 justify-center">
                 <a
-                  href="https://drive.google.com/file/d/19lBOcHphzDgsp72b7P9uGqoBJRm7TOf3/view"
+                  href="https://github.com/jyjoshi/PropInferenceEngine"
                   target="_blank"
                 >
                   <button className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md mt-4">
