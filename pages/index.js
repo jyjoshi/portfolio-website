@@ -6,6 +6,7 @@ import {
   AiFillGithub,
   AiFillRead,
   AiFillBook,
+  AiOutlineDownload,
 } from "react-icons/ai";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { useState } from "react";
@@ -37,6 +38,7 @@ export default function Home() {
   const [activePDF, setActivePDF] = useState("");
 
   const handlePDFOpen = (pdfPath) => {
+    setDropdownOpen(false);
     setActivePDF(pdfPath);
   };
 
@@ -98,18 +100,30 @@ export default function Home() {
           </nav>
           <div>
             {activePDF && (
-              <div className="shadow-lg px-4 py-4 flex flex-col items-end">
+              <div className="dark:shadow-gray-700 shadow-lg px-4 py-4 flex flex-col items-end relative">
                 <iframe
                   src={activePDF}
                   className="w-full h-96"
                   title="Resume"
                 ></iframe>
-                <button
-                  onClick={handleClose}
-                  className="mt-4 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded self-end"
-                >
-                  Close
-                </button>
+                <div className="flex justify-end space-x-3 mt-4">
+                  <a
+                    href={activePDF}
+                    download
+                    className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded flex items-center mt-4"
+                  >
+                    <div className="flex gap-2">
+                      <p>Download</p>
+                      <AiOutlineDownload />
+                    </div>
+                  </a>
+                  <button
+                    onClick={handleClose}
+                    className="mt-4 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded self-end "
+                  >
+                    Close
+                  </button>
+                </div>
               </div>
             )}
           </div>
