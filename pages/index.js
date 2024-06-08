@@ -163,7 +163,7 @@ export default function Home() {
               <p className="text-gray-800 py-1">Docker, Kubernetes</p>
               <p className="text-gray-800 py-1">RabbitMQ</p>
 
-              <div className="lg:flex gap-10 justify-center">
+              <div className="flex gap-4 lg:gap-10 justify-center">
                 <a
                   href="https://github.com/jyjoshi/k8s_system_design"
                   target="_blank"
@@ -175,14 +175,6 @@ export default function Home() {
                         <AiFillGithub />
                       </div>
                     </div>
-                  </button>
-                </a>
-                <a
-                  href="https://github.com/jyjoshi/k8s_system_design"
-                  target="_blank"
-                >
-                  <button className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md mt-4">
-                    Website
                   </button>
                 </a>
               </div>
@@ -204,7 +196,7 @@ export default function Home() {
               <p className="text-gray-800 py-1">TypeScript</p>
               <p className="text-gray-800 py-1">JavaScript</p>
               <p className="text-gray-800 py-1">Google Cloud</p>
-              <div className="lg:flex gap-10 justify-center">
+              <div className="flex gap-4 lg:gap-10 justify-center">
                 <a
                   href="https://github.com/jyjoshi/EventFinder-angular"
                   target="_blank"
@@ -238,6 +230,20 @@ export default function Home() {
               <h4 className="py-2 text-teal-600">Tech Used</h4>
               <p className="text-gray-800 py-1">Python</p>
               <p className="text-gray-800 py-1">Jupyter</p>
+              <p className="lg:py-3"></p>
+              <p className="lg:py-3"></p>
+              <div className="flex gap-4 lg:gap-10 justify-center">
+                <a href="https://github.com/jyjoshi/micrograd" target="_blank">
+                  <button className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md mt-4">
+                    <div className="flex justify-center gap-1 items-center">
+                      <div>Code</div>
+                      <div>
+                        <AiFillGithub />
+                      </div>
+                    </div>
+                  </button>
+                </a>
+              </div>
             </div>
           </div>
         </section>
