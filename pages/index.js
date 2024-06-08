@@ -26,10 +26,23 @@ import micrograd from "../public/micrograd.png";
 import gat from "../public/graph_attention_networks.png";
 import makemore from "../public/makemore.png";
 import nn_attacks from "../public/699_adversarial_attacks.png";
+import spiro from "../public/spiro.png";
+import KNN from "../public/KNN.png";
+import pente from "../public/pente.png";
+import resolution from "../public/resolution.png";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [activePDF, setActivePDF] = useState("");
+
+  const handlePDFOpen = (pdfPath) => {
+    setActivePDF(pdfPath);
+  };
+
+  const handleClose = () => {
+    setActivePDF(""); // Resets the activePDF state, hiding the iframe
+  };
 
   return (
     <div className={darkMode ? "dark" : ""}>
@@ -58,38 +71,48 @@ export default function Home() {
                 </button>
                 {dropdownOpen && (
                   <ul className="absolute right-0 w-48 mt-2 py-2 bg-gradient-to-r from-cyan-500 to-teal-500 text-white shadow-xl rounded-lg">
-                    <a
-                      href="https://drive.google.com/file/d/1LnwbDADc58x28tPVkYvMCQa0XxOa-0bu/view?usp=sharing"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <li
+                      className="px-4 py-2 hover:bg-gradient-to-r from-cyan-400 to-teal-400 rounded-lg cursor-pointer"
+                      onClick={() => handlePDFOpen("/Resume_Jay_Joshi.pdf")}
                     >
-                      <li className="px-4 py-2 hover:bg-gradient-to-r from-cyan-400 to-teal-400 rounded-lg">
-                        ML Engineer
-                      </li>
-                    </a>
-                    <a
-                      href="https://drive.google.com/file/d/1EmLyvzr2k7CxcxYN97b8jivNhOOzuwCE/view?usp=sharing"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      ML Engineer
+                    </li>
+
+                    <li
+                      className="px-4 py-2 hover:bg-gradient-to-r from-cyan-400 to-teal-400 rounded-lg cursor-pointer"
+                      onClick={() => handlePDFOpen("/Resume_swe_Jay.pdf")}
                     >
-                      <li className="px-4 py-2 hover:bg-gradient-to-r from-cyan-400 to-teal-400 rounded-lg">
-                        Software Engineer
-                      </li>
-                    </a>
-                    <a
-                      href="https://drive.google.com/file/d/1BxtDAaqsTNYgeNSH__KcWnm4Kq0Uz3z_/view?usp=sharing"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      Software Engineer
+                    </li>
+
+                    <li
+                      className="px-4 py-2 hover:bg-gradient-to-r from-cyan-400 to-teal-400 rounded-lg cursor-pointer"
+                      onClick={() => handlePDFOpen("/CV_Jay_Joshi.pdf")}
                     >
-                      <li className="px-4 py-2 hover:bg-gradient-to-r from-cyan-400 to-teal-400 rounded-lg">
-                        CV
-                      </li>
-                    </a>
+                      CV
+                    </li>
                   </ul>
                 )}
               </li>
             </ul>
           </nav>
+          <div>
+            {activePDF && (
+              <div className="shadow-lg px-4 py-4 flex flex-col items-end">
+                <iframe
+                  src={activePDF}
+                  className="w-full h-96"
+                  title="Resume"
+                ></iframe>
+                <button
+                  onClick={handleClose}
+                  className="mt-4 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded self-end"
+                >
+                  Close
+                </button>
+              </div>
+            )}
+          </div>
           <div className="text-center p-10 py-10">
             <h2 className="text-5xl py-2 text-teal-600 font-medium dark:text-teal-400 md:text-6xl">
               Jay Joshi
@@ -100,8 +123,10 @@ export default function Home() {
             <p className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
               I'm a Machine Learning Engineer based in California. I have a
               passion for software development and love to learn new
-              technologies. I have experience in building web applications and
-              machine learning models.
+              technologies. I have experience in building machine learning
+              models and web applications. I am currently looking for full-time
+              opportunities in the field of Machine Learning and Software
+              Development.
             </p>
             <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
               <a href="https://github.com/jyjoshi/" target="blank">
@@ -154,8 +179,9 @@ export default function Home() {
             <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white flex-1">
               <Image
                 src={k8s}
-                width={200}
-                height={100}
+                width={100}
+                height={50}
+                layout="responsive"
                 className="rounded-xl"
               />
               <h3 className="text-lg font-medium pt-8 pb-2  ">
@@ -191,8 +217,9 @@ export default function Home() {
             <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
               <Image
                 src={event_finder}
-                width={200}
-                height={100}
+                width={1.67}
+                height={1}
+                layout="responsive"
                 className="rounded-xl"
               />
               <h3 className="text-lg font-medium pt-8 pb-2 ">Event Finder</h3>
@@ -234,7 +261,12 @@ export default function Home() {
           {/* Projects - 2 */}
           <div className="lg:flex gap-10">
             <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
-              <Image src={micrograd} width={200} height={100} />
+              <Image
+                src={micrograd}
+                width={200}
+                height={80}
+                layout="responsive"
+              />
               <h3 className="text-lg font-medium pt-8 pb-2 ">Micrograd</h3>
               <p className="py-2">
                 A minimalistic neural network library designed to facilitate an
@@ -259,7 +291,13 @@ export default function Home() {
               </div>
             </div>
             <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white flex-1">
-              <Image src={gat} width={200} height={80} className="rounded-xl" />
+              <Image
+                src={gat}
+                width={200}
+                height={80}
+                layout="responsive"
+                className="rounded-xl"
+              />
               <h3 className="text-lg font-medium pt-8 pb-2  ">
                 Heterogeneous Link Prediction in Graphs
               </h3>
@@ -302,6 +340,7 @@ export default function Home() {
                 src={makemore}
                 width={130}
                 height={100}
+                layout="responsive"
                 className="rounded-xl"
               />
               <h3 className="text-lg font-medium pt-8 pb-2 ">Makemore</h3>
@@ -332,6 +371,7 @@ export default function Home() {
                 src={nn_attacks}
                 width={200}
                 height={100}
+                layout="responsive"
                 className="rounded-3xl"
               />
               <h3 className="text-lg font-medium pt-8 pb-2 ">
@@ -369,12 +409,19 @@ export default function Home() {
           {/* Projects - 4 */}
           <div className="lg:flex gap-10">
             <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white flex-1">
-              <Image src={gat} width={200} height={80} className="rounded-xl" />
+              <Image
+                src={spiro}
+                width={300}
+                height={200}
+                className="rounded-xl"
+              />
               <h3 className="text-lg font-medium pt-8 pb-2  ">
                 Geospatial Data Visualization and Analysis
               </h3>
               <p className="py-2">
-                Visualized and analysed geospatial data using various methods including spirographs, KNN (K-Nearest Neighbors), convex hull algorithms, and the use of SQL queries for data manipulation. 
+                Visualized and analysed geospatial data using various methods
+                including spirographs, KNN (K-Nearest Neighbors), convex hull
+                algorithms, and the use of SQL queries for data manipulation.
               </p>
               <h4 className="py-2 text-teal-600">Tech Used</h4>
               <p className="text-gray-800 py-1">Python</p>
@@ -383,10 +430,7 @@ export default function Home() {
               <p className="text-gray-800 py-1">MySQL</p>
 
               <div className="flex gap-4 lg:gap-10 justify-center">
-                <a
-                  href="https://github.com/jyjoshi/geoviz"
-                  target="_blank"
-                >
+                <a href="https://github.com/jyjoshi/geoviz" target="_blank">
                   <button className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md mt-4">
                     <div className="flex justify-center gap-1 items-center">
                       <div>Code</div>
@@ -399,12 +443,20 @@ export default function Home() {
               </div>
             </div>
             <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white flex-1">
-              <Image src={gat} width={200} height={80} className="rounded-xl" />
+              <Image
+                src={resolution}
+                width={200}
+                height={200}
+                className="rounded-xl"
+              />
               <h3 className="text-lg font-medium pt-8 pb-2  ">
                 Propositional Inference Engine
               </h3>
               <p className="py-2">
-                A propositional logic-based knowledge base (KB) with unit resolution for automated logical inference, enabling the system to ascertain if a provided statement can be logically deduced from the stored facts.
+                A propositional logic-based knowledge base (KB) with unit
+                resolution for automated logical inference, enabling the system
+                to ascertain if a provided statement can be logically deduced
+                from the stored facts.
               </p>
               <h4 className="py-2 text-teal-600">Tech Used</h4>
               <p className="text-gray-800 py-1">Python</p>
@@ -433,12 +485,18 @@ export default function Home() {
           {/* Projects - 5 */}
           <div className="lg:flex gap-10">
             <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white flex-1">
-              <Image src={gat} width={200} height={80} className="rounded-xl" />
+              <Image
+                src={pente}
+                width={200}
+                height={200}
+                className="rounded-xl"
+              />
               <h3 className="text-lg font-medium pt-8 pb-2  ">
                 Pente Game Agent
               </h3>
               <p className="py-2">
-                An agent designed to play pente using minimax algorithm and alpha-beta pruning.
+                An agent designed to play pente using minimax algorithm and
+                alpha-beta pruning.
               </p>
               <p className="py-2">
                 Achieved 6th place on the ogbl-biokg leaderboard with an MRR of
@@ -467,42 +525,7 @@ export default function Home() {
                 </a>
               </div>
             </div>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white flex-1">
-              <Image src={gat} width={200} height={80} className="rounded-xl" />
-              <h3 className="text-lg font-medium pt-8 pb-2  ">
-                Heterogeneous Link Prediction in Graphs
-              </h3>
-              <p className="py-2">
-                Implemented a link prediction model using Subgraph Sketching and
-                Graph Attention Networks.
-              </p>
-              <p className="py-2">
-                Achieved 6th place on the ogbl-biokg leaderboard with an MRR of
-                0.8414 while using significantly less parameters as compared to
-                the top models.
-              </p>
-              <h4 className="py-2 text-teal-600">Tech Used</h4>
-              <p className="text-gray-800 py-1">Python</p>
-              <p className="text-gray-800 py-1">Pytorch Geometric</p>
-              <p className="text-gray-800 py-1">Jupyter</p>
-              <p className="text-gray-800 py-1">Latex</p>
-
-              <div className="flex gap-4 lg:gap-10 justify-center">
-                <a
-                  href="https://drive.google.com/file/d/19lBOcHphzDgsp72b7P9uGqoBJRm7TOf3/view"
-                  target="_blank"
-                >
-                  <button className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md mt-4">
-                    <div className="flex justify-center gap-1 items-center">
-                      <div>Code</div>
-                      <div>
-                        <AiFillGithub />
-                      </div>
-                    </div>
-                  </button>
-                </a>
-              </div>
-            </div>
+            <div className="flex-1"></div>
           </div>
         </section>
         <section className="py-10">
