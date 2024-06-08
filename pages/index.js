@@ -107,6 +107,11 @@ export default function Home() {
                   title="Resume"
                 ></iframe>
                 <div className="flex justify-end space-x-3 mt-4">
+                  <div className="flex items-center mt-4">
+                    <p className="dark:text-red-600 text-red-600">
+                      Note: Please download the resume to acess all links
+                    </p>
+                  </div>
                   <a
                     href={activePDF}
                     download
