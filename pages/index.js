@@ -103,7 +103,7 @@ export default function Home() {
               <div className="dark:shadow-gray-700 shadow-lg px-4 py-4 flex flex-col items-end relative">
                 <iframe
                   src={activePDF}
-                  className="w-full h-96"
+                  className="w-full h-96 lg:h-[500px]"
                   title="Resume"
                 ></iframe>
                 <div className="flex justify-end space-x-3 mt-4">
