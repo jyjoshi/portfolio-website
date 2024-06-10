@@ -549,7 +549,7 @@ export default function Home() {
           </div>
         </section>
         <section className="py-10">
-          <div>
+          {/* <div>
             <h3 className="text-3xl py-1 dark:text-white ">Portofolio</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
               Since the beginning of my journey as a freelance designer and
@@ -619,7 +619,7 @@ export default function Home() {
                 src={web6}
               />
             </div>
-          </div>
+          </div> */}
         </section>
       </main>
     </div>
