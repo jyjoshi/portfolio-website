@@ -75,21 +75,21 @@ export default function Home() {
                   <ul className="absolute right-0 w-48 mt-2 py-2 bg-gradient-to-r from-cyan-500 to-teal-500 text-white shadow-xl rounded-lg">
                     <li
                       className="px-4 py-2 hover:bg-gradient-to-r from-cyan-400 to-teal-400 rounded-lg cursor-pointer"
-                      onClick={() => handlePDFOpen("/Resume_Jay_Joshi.pdf")}
+                      onClick={() => handlePDFOpen("Resume_Jay_Joshi.pdf")}
                     >
                       ML Engineer
                     </li>
 
                     <li
                       className="px-4 py-2 hover:bg-gradient-to-r from-cyan-400 to-teal-400 rounded-lg cursor-pointer"
-                      onClick={() => handlePDFOpen("/Resume_swe_Jay.pdf")}
+                      onClick={() => handlePDFOpen("Resume_swe_Jay.pdf")}
                     >
                       Software Engineer
                     </li>
 
                     <li
                       className="px-4 py-2 hover:bg-gradient-to-r from-cyan-400 to-teal-400 rounded-lg cursor-pointer"
-                      onClick={() => handlePDFOpen("/CV_Jay_Joshi.pdf")}
+                      onClick={() => handlePDFOpen("CV_Jay_Joshi.pdf")}
                     >
                       CV
                     </li>
