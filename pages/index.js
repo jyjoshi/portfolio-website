@@ -152,7 +152,7 @@ export default function Home() {
               <a href="https://github.com/jyjoshi/" target="blank">
                 <AiFillGithub />
               </a>
-              <a href="https:linkedin.com/in/jyjoshi" target="blank">
+              <a href="https://linkedin.com/in/jyjoshi/" target="blank">
                 <AiFillLinkedin />
               </a>
             </div>
