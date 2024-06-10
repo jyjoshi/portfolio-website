@@ -120,7 +120,6 @@ export default function Home() {
                     className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded flex items-center mt-4"
                   >
                     <div className="flex gap-2">
-                      <p>Download</p>
                       <AiOutlineDownload />
                     </div>
                   </a>
@@ -128,7 +127,7 @@ export default function Home() {
                     onClick={handleClose}
                     className="mt-4 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded self-end "
                   >
-                    Close
+                    X
                   </button>
                 </div>
               </div>
