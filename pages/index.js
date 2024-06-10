@@ -36,12 +36,12 @@ export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [activePDF, setActivePDF] = useState("");
-  const root_url = "https://jyjoshi.github.io/portfolio-website/";
+  // const root_url = "https://jyjoshi.github.io/portfolio-website/";
   // const root_url = "localhost:3000/";
 
   const handlePDFOpen = (pdfPath) => {
     setDropdownOpen(false);
-    setActivePDF(root_url + pdfPath);
+    setActivePDF(pdfPath);
   };
 
   const handleClose = () => {
